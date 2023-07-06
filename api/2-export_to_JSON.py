@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """gathers data from an API"""
 
 import json
