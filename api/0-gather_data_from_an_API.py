@@ -24,8 +24,9 @@ if __name__ == "__main__":
     EMPLOYEE_NAME = employee_name
     TOTAL_NUMBER_OF_TASKS = len(tasks)
     NUMBER_OF_DONE_TASKS = len([k for k, v in tasks.items() if v is True])
-    print("Employee {} is done with tasks({}/{}):".format(
-        EMPLOYEE_NAME, NUMBER_OF_DONE_TASKS, TOTAL_NUMBER_OF_TASKS))
+    print("Employee {} is done with tasks({}/{}):"
+            .format(
+                EMPLOYEE_NAME, NUMBER_OF_DONE_TASKS, TOTAL_NUMBER_OF_TASKS))
     for k, v in tasks.items():
         if v is True:
             print("\t {}".format(k))
