@@ -21,8 +21,9 @@ if __name__ == "__main__":
 
     todos_info_sorted = [
         dict(zip(["task", "completed", "username"],
-            [task["title"], task["completed"], employee_username]))
-        for task in todo_info]
+                 [task["title"], task["completed"], employee_username]))
+        for task in todo_info
+    ]
 
     user_dict = {str(employee_id): todos_info_sorted}
     with open(str(employee_id) + '.json', "w") as f:
