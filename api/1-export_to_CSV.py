@@ -20,8 +20,12 @@ if __name__ == "__main__":
     total_task_done = len(todo_info)
 
     with open(str(employee_id) + '.csv', "w") as f:
-        [f.write('"' + str(employee_id) + '",' +
+        [
+            f.write(
+                '"' + str(employee_id) + '",' +
                 '"' + employee_username + '",' +
                 '"' + str(task["completed"]) + '",' +
-                '"' + task["title"] + '",' + "\n")
-        for task in todo_info]
+                '"' + task["title"] + '",' + "\n"
+            )
+            for task in todo_info
+        ]
