@@ -17,8 +17,8 @@ def get_employee_task(employee_id):
     todo = todo.format(employee_id)
     todos_info = requests.request('GET', todo).json()
     return [
-        dict(zip(["task", "completed", "username"], [task["title"],
-            [task["completed"], employee_username]))
+        dict(zip(["task", "completed", "username"],
+             [task["title"], [task["completed"], employee_username]))
         for task in todos_info]
 
 
