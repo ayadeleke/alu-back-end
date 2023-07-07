@@ -8,7 +8,7 @@ import requests
 def get_employee_task(employee_id):
     """Doc"""
     url = "https://jsonplaceholder.typicode.com/users/{}" \
-            .format(employee_id)
+        .format(employee_id)
 
     user_info = requests.request('GET', url).json()
 
@@ -18,8 +18,9 @@ def get_employee_task(employee_id):
     todos_info = requests.request('GET', todo).json()
     return [
         dict(zip(["task", "completed", "username"],
-            [task["title"], task["completed"], employee_username]))
+                [task["title"], task["completed"], employee_username]))
         for task in todos_info]
+
 
 def get_employee_ids():
     """Doc"""
